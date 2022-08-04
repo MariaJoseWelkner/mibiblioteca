@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Books</h1>
+
+<div class="col-md-6 offset-md-6">
+  <%= render 'books/filter_form' %>
+</div>
+
+<div id="books">
+  <% @books.each do |book| %>
+    <%= render book %>
+    <p>
+      <%= link_to "Show this book", book %>
+    </p>
+  <% end %>
+</div>
+
+
+
+
+<div class="d-flex justify-content-end">
+  <%= paginate @books, theme: 'bootstrap-5' %>
+</div>
+
+<%= link_to "New book", new_book_path %>

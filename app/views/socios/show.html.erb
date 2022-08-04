@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @socio %>
+
+<div>
+  <%= link_to "Edit this socio", edit_socio_path(@socio) %> |
+  <%= link_to "Back to socios", socios_path %>
+
+  <%= button_to "Destroy this socio", @socio, method: :delete %>
+</div>

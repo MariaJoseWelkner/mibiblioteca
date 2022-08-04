@@ -1,0 +1,4 @@
+<%= search_form_for @q, class:"d-flex mb-3" do |f| %>
+  <%= f.select :status_eq, options_for_select(Book.statuses, @q.status_eq), {include_blank: "Ver todos"}, {class:"form-control me-2"} %>
+  <%= f.submit "Filter", class:"btn btn-outline-secondary" %>
+<% end %>
